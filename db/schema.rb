@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_195240) do
+ActiveRecord::Schema.define(version: 2020_08_17_200053) do
+
+  create_table "precautions", force: :cascade do |t|
+    t.string "cleaning_sanitizing"
+    t.integer "social_distancing"
+    t.string "ppe"
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.integer "party_size"
